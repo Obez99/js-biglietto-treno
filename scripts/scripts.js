@@ -3,6 +3,6 @@ alert("Benvenuto! Questo script calcolerà il prezzo totale del tuo viaggio, ver
 const kilometers = parseInt(prompt("Per prima cosa, quanti chilometri vorresti percorrere?"));
 const age = parseInt(prompt(`${kilometers} chilometri? D'accordo, quanti anni hai?`));
 
-const ticketPrice = kilometers * 0.21;
+const ticketPrice = (kilometers * 0.21).toFixed(2);
 
 alert("Il prezzo totale del biglietto è di: €" + ticketPrice);
