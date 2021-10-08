@@ -1,17 +1,17 @@
 alert("Benvenuto! Questo script calcolerà il prezzo totale del tuo viaggio, verranno applicati degli sconti in base all'età.");
 
-let kilometers = parseInt(prompt("Per prima cosa, quanti chilometri vorresti percorrere?"));
+const kilometers = parseInt(prompt("Per prima cosa, quanti chilometri vorresti percorrere?"));
 if (isNaN(kilometers))
 {
   alert("Inserisci un numero valido.");
-  kilometers = parseInt(prompt("Per prima cosa, quanti chilometri vorresti percorrere?"));
+  abort();
 }
 
-let age = parseInt(prompt(`${kilometers} chilometri? D'accordo, quanti anni hai?`));
+const age = parseInt(prompt(`${kilometers} chilometri? D'accordo, quanti anni hai?`));
 if (isNaN(age))
 {
   alert("Inserisci un numero valido.");
-  age = parseInt(prompt(`${kilometers} chilometri? D'accordo, quanti anni hai?`));
+  abort();
 }
 
 const ticketPrice = (kilometers * 0.21).toFixed(2);
