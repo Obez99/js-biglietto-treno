@@ -4,15 +4,17 @@ const kilometers = parseInt(prompt("Per prima cosa, quanti chilometri vorresti p
 if (isNaN(kilometers))
 {
   alert("Inserisci un numero valido.");
-  abort();
+  location.reload();
 }
 
+else{
 const age = parseInt(prompt(`${kilometers} chilometri? D'accordo, quanti anni hai?`));
 if (isNaN(age))
 {
   alert("Inserisci un numero valido.");
-  abort();
+  location.reload()
 }
+else{
 
 const ticketPrice = (kilometers * 0.21).toFixed(2);
 const under18 = (ticketPrice * 20 / 100).toFixed(2);
@@ -30,4 +32,7 @@ if(age < 18){
 else if(age > 65){
   alert("Dato che sei un over 65, hai diritto a uno sconto del 40% sul tuo biglietto, pari a €" + over65);
   alert("Il prezzo finale del tuo biglietto è di €" + (ticketPrice - over65).toFixed(2));
+
+}
+}
 }
